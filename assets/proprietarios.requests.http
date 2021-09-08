@@ -1,0 +1,47 @@
+# Utilizando o Plugin do VSCode - Rest Client
+# Estou utilizando este plugin para que as requisições fiquem salvas e já sirva de documentação
+
+@baseUrl = http://localhost:3000
+
+###
+
+GET {{baseUrl}}
+
+### 
+
+# GET All
+GET {{baseUrl}}/api/proprietarios
+
+### 
+
+# GET by ID
+GET {{baseUrl}}/api/proprietarios/5
+
+###
+
+# POST Create
+
+POST {{baseUrl}}/api/proprietarios 
+Content-Type: application/json
+
+{
+  "nome": "Nicolas Breno Nelson Silva",
+  "telefone": "(27) 2734-9247"
+}
+
+###
+
+PUT {{baseUrl}}/api/proprietarios/7
+Content-Type: application/json
+
+{
+  "nome": "Alexandre Iago da Conceição",
+  "telefone": "(81) 2678-7782"
+}
+
+### 
+
+# DELETE Proprietario by ID
+DELETE {{baseUrl}}/api/proprietarios/7
+
+### 

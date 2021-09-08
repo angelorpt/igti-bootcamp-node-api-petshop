@@ -1,0 +1,54 @@
+# Utilizando o Plugin do VSCode - Rest Client
+# Estou utilizando este plugin para que as requisições fiquem salvas e já sirva de documentação
+
+@baseUrl = http://localhost:3000
+
+###
+
+GET {{baseUrl}}
+
+### 
+
+# GET All
+GET {{baseUrl}}/api/animais
+
+### 
+
+# GET by ID
+GET {{baseUrl}}/api/animais/6
+
+###
+
+# GET Animais do Proprietario
+GET {{baseUrl}}/api/animais/?proprietario_id=1
+
+###
+
+# POST Create
+
+POST {{baseUrl}}/api/animais 
+Content-Type: application/json
+
+{
+  "nome": "Totó",
+  "tipo": "Cachorro",
+  "proprietario_id": 6
+}
+
+###
+
+PUT {{baseUrl}}/api/animais/10
+Content-Type: application/json
+
+{
+  "nome": "Jerry",
+  "tipo": "rato",
+  "proprietario_id": 1
+}
+
+### 
+
+# DELETE Proprietario by ID
+DELETE {{baseUrl}}/api/animais/1
+
+### 
